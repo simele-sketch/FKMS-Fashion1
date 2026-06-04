@@ -1,0 +1,487 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Fashion Store</title>
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+    <!-- MAIN CONTENT -->
+    <div id="mainContent">
+      <header class="navbar">
+    <div class="logo">FKMS Fashion</div>
+
+    <nav>
+        <a href="#home">Home</a>
+        <a href="#about">About</a>
+        <a href="#shop">Shop</a>
+        <a href="#cart">Cart (<span id="cartCount">0</span>)</a>
+         <a href="#signup">Signup</a>
+        <a href="#contact">Contact</a>
+        
+
+    </nav>
+
+    <!-- SEARCH -->
+    <div class="search-box">
+        <input type="text" id="searchInput" placeholder="Search clothes..." oninput="amazonSearch()">
+        <button>🔍</button>
+
+        <div id="suggestBox" class="suggest-box"></div>
+    </div>
+    <button onclick="toggleDarkMode()" id="darkBtn">🌙 Dark Mode</button>
+
+</header>
+        <!-- Hero-->
+        <section id="home" class="hero">
+            <div class="hero-content">
+                <h1>FKMS Fashion</h1>
+                <p>Discover Your Style</p>
+                <a href="#shop" class="btn">Shop Now</a>
+            </div>
+        </section>
+       
+        <!-- ABOUT -->
+<section id="about" class="section">
+    <h2>About FKMS Fashion</h2>
+
+<p>
+Welcome to FKMS Fashion, where style meets quality. We are an online fashion store dedicated to providing trendy, comfortable, and affordable clothing for everyone.
+</p>
+
+<p>
+Our collection includes fashionable dresses, jeans, jackets, t-shirts, hoodies, and other clothing items carefully selected to match modern fashion trends. We aim to help our customers look confident and stylish for every occasion.
+</p>
+
+<p>
+At FKMS Fashion, customer satisfaction is our priority. We strive to offer quality products, fair prices, and an easy shopping experience through our website. Customers can browse products, search for their favorite items, add products to their cart, and place orders conveniently.
+</p>
+
+<p>
+Our mission is to make fashion accessible, affordable, and enjoyable while delivering excellent service to our customers. Whether you are looking for casual wear, elegant outfits, or everyday fashion, FKMS Fashion is here to help you discover your perfect style.
+</p>
+
+<p>
+Thank you for choosing FKMS Fashion. Your style is our passion.
+</p>
+
+</section>
+
+
+        <!-- SHOP -->
+        <section class="section" id="shop">
+            <h2>Dress Collection</h2>
+
+            <div class="grid">
+                 <!-- Dresses -->
+                <div class="card product-card">
+                    <img src="blue.jpg" alt="Elegant Blue Evening Dress">
+                    <h3>Elegant Blue Evening Dress</h3>
+                  <p data-price="25">$25</p>
+                    <button onclick="addToCart('Elegant Blue Evening Dress', 25)">Add to Cart</button>
+                </div>
+
+                <div class="card product-card">
+                    <img src="black.jpg" alt="Classic Black Fashion Dress">
+                    <h3>Classic Black Fashion Dress</h3>
+                   <p data-price="15">$15</p>
+                    <button onclick="addToCart('Classic Black Fashion Dress', 15)">Add to Cart</button>
+                </div>
+                 <div class="card product-card">
+                    <img src="bblue.jpg" alt="Royal Blue Party Dress">
+                    <h3>Royal Blue Party Dress</h3>
+                   <p data-price="25">$25</p>
+                    <button onclick="addToCart('Royal Blue Party Dress', 25)">Add to Cart</button>
+                </div>
+
+                <div class="card product-card">
+                    <img src="oo.jpg" alt="Floral Summer Dresss">
+                    <h3>Floral Summer Dress</h3>
+                    <p data-price="15">$15</p>
+                    <button onclick="addToCart('Floral Summer Dress', 15)">Add to Cart</button>
+                </div>
+
+                <div class="card product-card">
+                    <img src="red.jpg" alt="Red Luxury Dress">
+                    <h3>Red Luxury Dress</h3>
+                      <p data-price="16">$16</p>
+                    <button onclick="addToCart('Red Luxury Dress', 16)">Add to Cart</button>
+                </div>
+                <!-- More items -->
+
+                <div class="card product-card">
+                    <img src="bb.jpg" alt="Chic Casual Dress">
+                    <h3>Chic Casual Dresss</h3>
+                      <p data-price="15">$15</p>
+                    <button onclick="addToCart('Chic Casual Dress', 15)">Add to Cart</button>
+                </div>
+
+                <div class="card product-card">
+                    <img src="ii.jpg" alt="Modern Women's Dress">
+                    <h3>Modern Women's Dress</h3>
+                   <p data-price="15">$15</p>
+                    <button onclick="addToCart('Modern Women Dress', 15)">Add to Cart</button>
+                </div>
+
+                <div class="card product-card">
+                    <img src="tt.jpg" alt="Stylish Maxi Dress">
+                    <h3>Stylish Maxi Dress</h3>
+                      <p data-price="16">$16</p>
+                    <button onclick="addToCart('Stylish Maxi Dress', 16)">Add to Cart</button>
+                </div>
+
+                <div class="card product-card">
+                    <img src="yy.jpg" alt="Premium Designer Dress">
+                    <h3>Premium Designer Dresss</h3>
+                    <p data-price="15">$15</p>
+                    <button onclick="addToCart('Premium Designer Dresss', 15)">Add to Cart</button>
+                </div>
+            </div>
+            <h2>Jeans Collection</h2>
+            <div class="grid">
+                 <!-- Jeans -->
+                <div class="card product-card">
+                    <img src="ee eans.jpg" alt="Slim Fit Blue Jeans">
+                    <h3>Slim Fit Blue Jeans</h3>
+                     <p data-price="18">$18</p>
+                    <button onclick="addToCart('Slim Fit Blue Jeans', 18)">Add to Cart</button>
+                </div>
+
+                <div class="card product-card">
+                    <img src="dd eans.jpg" alt="Classic Denim Jeans">
+                    <h3>Classic Denim Jeans</h3>
+                     <p data-price="15">$15</p>
+                    <button onclick="addToCart('Classic Denim Jeans', 15)">Add to Cart</button>
+                </div>
+
+                <div class="card product-card">
+                    <img src="cc eans.jpg" alt="Dark Wash Jeans">
+                    <h3>Dark Wash Jeans</h3>
+                  <p data-price="38">$38</p>
+                    <button onclick="addToCart('Dark Wash Jeans', 38)">Add to Cart</button>
+                </div>
+
+                <div class="card product-card">
+                    <img src="bb.eans.jpg" alt="Skinny Fit Jeans">
+                    <h3>Skinny Fit Jeanss</h3>
+                <p data-price="38">$38</p>
+                    <button onclick="addToCart('Skinny Fit Jeans', 38)">Add to Cart</button>
+                </div>
+                <!-- More items -->
+
+                <div class="card product-card">
+                    <img src="ii eans.jpg" alt="Women's Fashion Jeans">
+                    <h3>Women's Fashion Jeans</h3>
+                     <p data-price="15">$15</p>
+                    <button onclick="addToCart('Women Fashion Jeanss', 15)">Add to Cart</button>
+                </div>
+
+                <div class="card product-card">
+                    <img src="leather eans.jpg" alt="Leather Style Jeans">
+                    <h3>Leather Style Jeans</h3>
+                    <p data-price="15">$15</p>
+                    <button onclick="addToCart('Leather Style Jeans', 15)">Add to Cart</button>
+                </div>
+
+                <div class="card product-card">
+                    <img src="black eans.jpg" alt="Black Denim Jeans">
+                    <h3>Black Denim Jeans</h3>
+                     <p data-price="15">$15</p>
+                    <button onclick="addToCart('Black Denim Jeans', 15)">Add to Cart</button>
+                </div>
+
+                <div class="card product-card">
+                    <img src="blue eans.jpg" alt="Blue Stretch Jeans">
+                    <h3>Blue Stretch Jeans</h3>
+                   <p data-price="15">$15</p>
+                    <button onclick="addToCart('Blue Stretch Jeans', 40)">Add to Cart</button>
+                </div>
+
+                <div class="card product-card">
+                    <img src="ii eans.jpg" alt="Casual Everyday Jeans">
+                    <h3>Casual Everyday Jeans</h3>
+                    <p data-price="38">$38</p>
+                    <button onclick="addToCart('Casual Everyday Jeanss', 38)">Add to Cart</button>
+                </div>
+
+            </div>
+            
+                <h2>jacket Collection</h2>
+                <div class="grid">
+                 <!-- jacket-->
+                <div class="card product-card">
+                    <img src="oo acket.jpg" alt="Winter Fashion Jacket">
+                    <h3>Winter Fashion Jacket</h3>
+                    <p data-price="38">$38</p>
+                    <button onclick="addToCart('Winter Fashion Jacket',38)">Add to Cart</button>
+                </div>
+
+                <div class="card product-card">
+                    <img src="dd acket.jpg" alt="Denim Jacket">
+                    <h3>Denim Jacket</h3>
+                   <p data-price="38">$38</p>
+                    <button onclick="addToCart('Denim Jacket',38)">Add to Cart</button>
+                </div>
+
+               <div class="card product-card">
+                    <img src="ii acket.jpg"lt="Casual Street Jacket">
+                    <h3>Casual Street Jacket</h3>
+                     <p data-price="16">$16</p>
+                    <button onclick="addToCart('Casual Street Jacket', 16)">Add to Cart</button>
+                </div>
+
+                <div class="card product-card">
+                    <img src="pp acket.jpg" alt="Premium Leather Jacket">
+                    <h3>Premium Leather Jacket</h3>
+                    <p data-price="16">$16</p>
+                    <button onclick="addToCart('Premium Leather Jacket', 16)">Add to Cart</button>
+                </div>
+                <!-- More items -->
+
+                <div class="card product-card">
+                    <img src="nn acket.jpg" alt="Modern Hooded Jacket">
+                    <h3>Modern Hooded Jacket</h3>
+                    <p data-price="38">$38</p>
+                    <button onclick="addToCart('Modern Hooded Jacket', 38)">Add to Cart</button>
+                </div>
+
+                <div class="card product-card">
+                    <img src="rr acket.jpg" alt="Elegant Women's Jacket">
+                    <h3>Elegant Women's Jacket</h3>
+                    <p data-price="38">$38</p>
+                    <button onclick="addToCart('Elegant Women Jacket', 38)">Add to Cart</button>
+                </div>
+
+                <div class="card product-card">
+                    <img src="ww acket.jpg" alt="Outdoor Travel Jacket">
+                    <h3>Outdoor Travel Jacket</h3>
+                    <p data-price="38">$38</p>
+                    <button onclick="addToCart('Outdoor Travel Jackets', 38)">Add to Cart</button>
+                </div>
+
+               <div class="card product-card">
+                    <img src="qq acket.jpg" alt="Classic Black Jacket">
+                    <h3>Classic Black Jacket</h3>
+                     <p data-price="38">$38</p>
+                    <button onclick="addToCart('Classic Black Jacket', 38)">Add to Cart</button>
+                </div>
+
+               <div class="card product-card">
+                    <img src="ii acket.jpg" alt="Urban Style Jacket">
+                    <h3>Urban Style Jacket</h3>
+                    <p data-price="38">$38</p>
+                    <button onclick="addToCart('Urban Style Jacket', 38)">Add to Cart</button>
+                </div>
+                </div>
+                
+
+                
+                <h2>t shirt Collection</h2>
+            <div class="grid">
+                 <!--t shirt-->
+                <div class="card product-card">
+                    <img src="l t shirt.jpg" alt="Basic Cotton T-Shirt">
+                    <h3>Basic Cotton T-Shirt</h3>
+                <p data-price="28">$28</p>
+                    <button onclick="addToCart('Basic Cotton T-Shirt', 28)">Add to Cart</button>
+                </div>
+
+                <div class="card product-card">
+                    <img src="m t shirt.jpg" alt="Casual White T-Shirt">
+                    <h3>Casual White T-Shirt</h3>
+              <p data-price="28">$28</p>
+                    <button onclick="addToCart('Casual White T-Shirt', 28)">Add to Cart</button>
+                </div>
+
+                <div class="card product-card">
+                    <img src="ee t shirt.jpg"alt="Premium Graphic T-Shirt">
+                    <h3>Premium Graphic T-Shirt</h3>
+                  <p data-price="28">$28</p>
+                    <button onclick="addToCart('Premium Graphic T-Shirt', 28)">Add to Cart</button>
+                </div>
+
+                <div class="card product-card">
+                    <img src="oo t shirt.jpg" alt="Modern Fashion Tee">
+                    <h3>Modern Fashion Tee</h3>
+                  <p data-price="18">$18</p>
+                    <button onclick="addToCart('Modern Fashion Tee', 18)">Add to Cart</button>
+                </div>
+                <!-- More items -->
+
+                <div class="card product-card">
+                    <img src="pp t shirt.jpg" alt="Sport Fit T-ShirtRed Dress">
+                    <h3>Sport Fit T-Shirt</h3>
+                 <p data-price="28">$28</p>
+                    <button onclick="addToCart('Sport Fit T-Shirt', 28)">Add to Cart</button>
+                </div>
+
+                <div class="card product-card">
+                    <img src="qq t shirt.jpg" alt="Urban Street T-Shirt">
+                    <h3>Urban Street T-Shirt</h3>
+                 <p data-price="28">$28</p>
+                    <button onclick="addToCart('Urban Street T-Shirt', 28)">Add to Cart</button>
+                </div>
+
+               <div class="card product-card">
+                    <img src="rr t shirt.jpg" alt="Black Cotton T-Shirt">
+                    <h3>Black Cotton T-Shirt</h3>
+                     <p data-price="18">$18</p>
+                    <button onclick="addToCart('Black Cotton T-Shirt', 18)">Add to Cart</button>
+                </div>
+
+               <div class="card product-card">
+                    <img src="uu t shirt.jpg" alt="Designer Print T-Shirt">
+                    <h3>Designer Print T-Shirt</h3>
+                    <p data-price="28">$28</p>
+                    <button onclick="addToCart('Designer Print T-Shirt', 28)">Add to Cart</button>
+                </div>
+
+                <div class="card product-card">
+                    <img src="yy t shirt.jpg" alt="Everyday Comfort T-Shirt">
+                    <h3>Everyday Comfort T-Shirt</h3>
+                     <p data-price="18">$18</p>
+                    <button onclick="addToCart('Everyday Comfort T-Shirt', 18)">Add to Cart</button>
+                </div>
+                </div><h2>Hoodie Collection</h2>
+            <div class="grid">
+                 <!--t shirt-->
+               <div class="card product-card">
+                    <img src="s h.jpg"alt="Sports Hoodie">
+                    <h3>Sports Hoodie</h3>
+                   <p data-price="35">$35</p>
+                    <button onclick="addToCart('Sports Hoodie', 35)">Add to Cart</button>
+                </div>
+
+               <div class="card product-card">
+                    <img src="b h.jpg" alt="Black Premium Hoodie">
+                    <h3>Black Premium Hoodie</h3>
+                    <p data-price="25">$25</p>
+                    <button onclick="addToCart('Black Premium Hoodie', 25)">Add to Cart</button>
+                </div>
+
+                <div class="card product-card">
+                    <img src="r h.jpg"alt="Red Casual Hoodie">
+                    <h3>Red Casual Hoodie</h3>
+                    <p data-price="40">$40</p>
+                    <button onclick="addToCart('Red Casual Hoodie', 40)">Add to Cart</button>
+                </div>
+
+                <div class="card product-card">
+                    <img src="n h.jpg" alt="Navy Blue Hoodie">
+                    <h3>Navy Blue Hoodie</h3>
+                   <p data-price="25">$25</p>
+                    <button onclick="addToCart('Navy Blue Hoodie', 25)">Add to Cart</button>
+                </div>
+                <!-- More items -->
+
+                <div class="card product-card">
+                    <img src="l h.jpg" alt="Lightweight Hoodie">
+                    <h3>Lightweight Hoodie</h3>
+                    <p data-price="50">$50</p>
+                    <button onclick="addToCart('Lightweight Hoodie', 50)">Add to Cart</button>
+                </div>
+
+                <div class="card product-card">
+                    <img src="b h.jpg" alt="Urban Hoodie">
+                    <h3>Urban Hoodie</h3>
+                  <p data-price="40">$40</p>
+                    <button onclick="addToCart('Urban Hoodie', 40)">Add to Cart</button>
+                </div>
+
+                <div class="card product-card">
+                    <img src="t h.jpg" alt="Trendy Fashion Hoodie">
+                    <h3>Trendy Fashion Hoodie</h3>
+    
+                    <p data-price="20">$20</p>
+                    <button onclick="addToCart('Trendy Fashion Hoodie', 20)">Add to Cart</button>
+                </div>
+
+                <div class="card product-card">
+                    <img src="y h.jpg" alt="Youth Style Hoodie">
+                    <h3>Youth Style Hoodie</h3>
+                 <p data-price="30">$30</p>
+                    <button onclick="addToCart('Youth Style Hoodie', 30)">Add to Cart</button>
+                </div>
+
+                <div class="card product-card">
+                    <img src="z h.jpg" alt="Zip-Up Hoodie">
+                    <h3>Zip-Up Hoodie</h3>
+                    <p data-price="40">$40</p>
+                    <button onclick="addToCart('Zip-Up Hoodie', 40)">Add to Cart</button>
+                </div>
+                </div>
+        </section>
+    </div>
+    <!-- CART -->
+<section id="cart" class="section">
+
+    <h2>Shopping Cart</h2>
+
+    <div id="cart-items"></div>
+
+    <h3>Total: $<span id="total">0</span></h3>
+
+    <button onclick="checkout()">Buy Now</button>
+
+</section>
+
+<!-- SIGNUP -->
+<section id="signup" class="section">
+
+    <h2>Create Account</h2>
+
+    <form>
+
+        <input type="text" placeholder="Full Name" required>
+
+        <input type="email" placeholder="Email Address" required>
+
+        <input type="password" placeholder="Password" required>
+
+        <button type="submit">Sign Up</button>
+
+    </form>
+
+</section>
+
+<!-- CONTACT -->
+<section id="contact" class="section">
+
+    <h2>Contact Us</h2>
+
+    
+    <form>
+
+        <input type="text" placeholder="Your Name" required>
+
+        <input type="email" placeholder="Your Email" required>
+
+        <textarea placeholder="Your Message"></textarea>
+
+        <button type="submit">Send Message</button>
+
+    </form>
+
+</section>
+<footer class="footer">
+
+<h3>FKMS Fashion</h3>
+
+<p>Discover Your Style with Quality and Confidence.</p>
+
+<p>📍 Addis Ababa, Ethiopia</p>
+
+<p>Contact us through the Contact Us section above.</p>
+
+<p>&copy; 2026 FKMS Fashion. All Rights Reserved.</p>
+
+</footer>
+
+
+
+<script src="script.js"></script>
+
+</body>
+</html>
